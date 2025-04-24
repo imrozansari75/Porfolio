@@ -3,18 +3,19 @@ import { EXPERIENCES } from '../constants'
 
 function Experience() {
     return (
-        <section className="px-10 border-t border-gray-200 py-24">
+        <section className="px-10 py-24">
             <div className="container mx-auto px-4">
-                <h2 className="mb-20 text-center text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
+                <h2 className="mb-20 text-center text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent leading-[1.3] py-2">
                     Work Experience
                 </h2>
 
-                <div className="space-y-12">
+                <div className="space-y-0">
                     {EXPERIENCES.map((exp, index) => (
-                        <div
-                            key={index}
-                            className="group relative pl-8 pb-8 border-l-2 border-gray-300 hover:border-cyan-400 transition-colors"
-                        >
+                       <div
+                       key={index}
+                       className="group relative pl-8 pb-8 min-h-48 border-l-2 border-gray-300 hover:border-cyan-400 transition-colors"
+                     >
+                     
                             {/* Gradient dot indicator */}
                             <div className="absolute left-0 w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 transform -translate-x-1/2 top-1"></div>
 
@@ -33,7 +34,10 @@ function Experience() {
                                         {exp.technologies.map((tag, i) => (
                                             <span
                                                 key={i}
-                                                className="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 hover:text-white transition-all"
+                                                className="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800 
+                                                hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 hover:text-white 
+                                                transition-[background-color] duration-0] 
+                                                hover:transition-colors hover:duration-300"
                                             >
                                                 {tag}
                                             </span>
